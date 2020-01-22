@@ -73,7 +73,7 @@ class BatteryDashWidget(QLabel):
         self._charge_icons = converted_icons[1]
         self._name = name
         self._charging = False
-        self._stale = True
+        self._stale = False
         self.__state = 0
         self.setMargin(5)
         self.state_changed.connect(self._update_state)
