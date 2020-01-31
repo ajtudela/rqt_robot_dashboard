@@ -79,7 +79,8 @@ class ConsoleDashWidget(IconToolButton):
 
         self.context = context
         self.clicked.connect(self._show_console)
-
+        self.context.add_widget(self._console)
+		
         self.update_state(0)
         self._timer = QTimer()
         self._timer.timeout.connect(self._insert_messages)
